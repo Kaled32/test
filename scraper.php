@@ -11,6 +11,7 @@ $html = scraperwiki::scrape("https://www.crunchbase.com/organization/zendesk");
 // Find something on the page using css selectors
 $dom = new simple_html_dom();
 $dom->load($html);
+echo $html;
 print_r($dom->find("div.details")); //div.large h5
 
 // Write out to the sqlite database using scraperwiki library
